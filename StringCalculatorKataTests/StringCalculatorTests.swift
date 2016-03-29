@@ -11,26 +11,26 @@ import XCTest
 
 class StringCalculatorTests: XCTestCase {
     
+    let stringCalculator: StringCalculator = StringCalculator()
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     func testEmptyStringReturnsZero() {
-        var stringCalculator = StringCalculator()
         XCTAssertEqual(0, stringCalculator.add(""))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testPassOneNumberReturnsItsValue() {
+        XCTAssertEqual(1, stringCalculator.add("1"))
+    }
+    
+    func testTwoNumerArgumentReturnsSum() {
+        XCTAssertEqual(3, stringCalculator.add("1,2"))
     }
     
 }
