@@ -9,7 +9,7 @@
 import XCTest
 @testable import StringCalculatorKata
 
-class StringCalculatorKataTests: XCTestCase {
+class StringCalculatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,9 +21,9 @@ class StringCalculatorKataTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEmptyStringReturnsZero() {
+        var stringCalculator = StringCalculator()
+        XCTAssertEqual(0, stringCalculator.add(""))
     }
     
     func testPerformanceExample() {

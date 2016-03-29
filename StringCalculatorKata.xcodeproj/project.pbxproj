@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		802DC1841CAACC0700C54D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1831CAACC0700C54D33 /* AppDelegate.swift */; };
-		802DC1861CAACC0700C54D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1851CAACC0700C54D33 /* ViewController.swift */; };
-		802DC1891CAACC0700C54D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802DC1871CAACC0700C54D33 /* Main.storyboard */; };
-		802DC18B1CAACC0700C54D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802DC18A1CAACC0700C54D33 /* Assets.xcassets */; };
-		802DC18E1CAACC0700C54D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802DC18C1CAACC0700C54D33 /* LaunchScreen.storyboard */; };
-		802DC1991CAACC0700C54D33 /* StringCalculatorKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1981CAACC0700C54D33 /* StringCalculatorKataTests.swift */; };
+		802DC1A61CAAD06100C54D33 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1A51CAAD06100C54D33 /* StringCalculator.swift */; };
+		802DC1A91CAAD17700C54D33 /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1981CAACC0700C54D33 /* StringCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +25,11 @@
 /* Begin PBXFileReference section */
 		802DC1801CAACC0700C54D33 /* StringCalculatorKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCalculatorKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802DC1831CAACC0700C54D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		802DC1851CAACC0700C54D33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		802DC1881CAACC0700C54D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		802DC18A1CAACC0700C54D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		802DC18D1CAACC0700C54D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		802DC18F1CAACC0700C54D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802DC1941CAACC0700C54D33 /* StringCalculatorKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		802DC1981CAACC0700C54D33 /* StringCalculatorKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorKataTests.swift; sourceTree = "<group>"; };
+		802DC1981CAACC0700C54D33 /* StringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
 		802DC19A1CAACC0700C54D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		802DC1A51CAAD06100C54D33 /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				802DC1831CAACC0700C54D33 /* AppDelegate.swift */,
-				802DC1851CAACC0700C54D33 /* ViewController.swift */,
-				802DC1871CAACC0700C54D33 /* Main.storyboard */,
-				802DC18A1CAACC0700C54D33 /* Assets.xcassets */,
-				802DC18C1CAACC0700C54D33 /* LaunchScreen.storyboard */,
 				802DC18F1CAACC0700C54D33 /* Info.plist */,
+				802DC1AA1CAAD1FF00C54D33 /* classes */,
 			);
 			path = StringCalculatorKata;
 			sourceTree = "<group>";
@@ -90,10 +81,26 @@
 		802DC1971CAACC0700C54D33 /* StringCalculatorKataTests */ = {
 			isa = PBXGroup;
 			children = (
-				802DC1981CAACC0700C54D33 /* StringCalculatorKataTests.swift */,
+				802DC1981CAACC0700C54D33 /* StringCalculatorTests.swift */,
 				802DC19A1CAACC0700C54D33 /* Info.plist */,
 			);
 			path = StringCalculatorKataTests;
+			sourceTree = "<group>";
+		};
+		802DC1AA1CAAD1FF00C54D33 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				802DC1AB1CAAD20F00C54D33 /* StringCalculator */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		802DC1AB1CAAD20F00C54D33 /* StringCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				802DC1A51CAAD06100C54D33 /* StringCalculator.swift */,
+			);
+			name = StringCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +184,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802DC18E1CAACC0700C54D33 /* LaunchScreen.storyboard in Resources */,
-				802DC18B1CAACC0700C54D33 /* Assets.xcassets in Resources */,
-				802DC1891CAACC0700C54D33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802DC1861CAACC0700C54D33 /* ViewController.swift in Sources */,
+				802DC1A61CAAD06100C54D33 /* StringCalculator.swift in Sources */,
 				802DC1841CAACC0700C54D33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802DC1991CAACC0700C54D33 /* StringCalculatorKataTests.swift in Sources */,
+				802DC1A91CAAD17700C54D33 /* StringCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,25 +223,6 @@
 			targetProxy = 802DC1951CAACC0700C54D33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		802DC1871CAACC0700C54D33 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				802DC1881CAACC0700C54D33 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		802DC18C1CAACC0700C54D33 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				802DC18D1CAACC0700C54D33 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		802DC19B1CAACC0700C54D33 /* Debug */ = {

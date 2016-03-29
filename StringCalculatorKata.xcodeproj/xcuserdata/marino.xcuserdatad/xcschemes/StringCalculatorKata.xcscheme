@@ -37,6 +37,11 @@
                BlueprintName = "StringCalculatorKataTests"
                ReferencedContainer = "container:StringCalculatorKata.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "StringCalculatorKataTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
