@@ -29,8 +29,14 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(1, stringCalculator.add("1"))
     }
     
-    func testTwoNumerArgumentReturnsSum() {
+    func testTwoNumbersArgumentReturnsSum() {
         XCTAssertEqual(3, stringCalculator.add("1,2"))
+    }
+
+    
+    func testArbitraryNumberOfArgumentsReturnsSum() {
+        XCTAssertEqual(6, stringCalculator.add("1,2,3"))
     }
     
 }
+

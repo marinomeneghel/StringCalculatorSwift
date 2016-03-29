@@ -13,15 +13,17 @@ class StringCalculator {
         if (numberString.characters.count == 1) {
             return Int(numberString)!
         
-        } else if (numberString.characters.count == 3) {
+        } else if (numberString.characters.count > 1) {
+            
             let numbers = numberString.componentsSeparatedByString(",")
-            print("Num pos 0= \(numbers[0]) pos 1= \(numbers[1])")
-            return Int(numbers[0])! + Int(numbers[1])!
-            
-            
-        } else {
-            return 0
+            var counter: Int = 0
+            for num in numbers {
+                counter += Int(num)!
+            }
+            return counter
         }
+        
+        return 0
     }
     
 }
