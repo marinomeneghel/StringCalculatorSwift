@@ -48,5 +48,10 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(12, stringCalculator.add("//;\n1;2;3;6"))
     }
     
+    func testMixedDelimiters() {
+        XCTAssertEqual(12, stringCalculator.add("//$\n1$2,3\n6"))
+    }
+    
+    
 }
 

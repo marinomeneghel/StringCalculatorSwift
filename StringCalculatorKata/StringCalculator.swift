@@ -12,7 +12,7 @@ class StringCalculator {
     private let commaDelimiter: String = ","
     private let newLineDelimiter: String = "\n"
     private let customDelimiterIndicatorStart: String = "//"
-    private let customDelimiterIndicatorEnd: String = "\n"
+    private let customDelimiterIndicatorEnd: Character = "\n"
     private var defaultDelimiters: [String]
     private var numberString: String = ""
     
@@ -32,24 +32,22 @@ class StringCalculator {
         if(hasCustomDelimiter()) {
             defaultDelimiters.append(getCustomDelimiter())
         }
-        print(defaultDelimiters)
         return defaultDelimiters
     }
     
     func getCustomDelimiter() -> String {
-        let range: Range = getCustomDelimiterRangeInString()
-        print(numberString)
+        let range: Range = indexAfterInitialDelimiter..<indexBeforeFinalDelimiter
         let customDelimiter: String = numberString[range]
-        numberString = numberString.substringFromIndex(range.endIndex.advancedBy(1))
-        print(numberString)
+        numberString = numberString.substringFromIndex(indexBeforeFinalDelimiter.advancedBy(1))
         return customDelimiter
     }
     
-    func getCustomDelimiterRangeInString() -> Range<String.Index> {
-        let startIndex = numberString.characters.startIndex.advancedBy(2)
-        let endIndex = numberString.characters.startIndex.advancedBy(3)
-        // Syntax to express Range<String.Index>(start:startIndex!, end:endIndex!) in Swift 3.0
-        return startIndex..<endIndex
+    private var indexBeforeFinalDelimiter: String.Index {
+        return numberString.characters.indexOf(customDelimiterIndicatorEnd)!
+    }
+    
+    private var indexAfterInitialDelimiter: String.Index {
+        return numberString.characters.startIndex.advancedBy(customDelimiterIndicatorStart.characters.count)
     }
     
     func hasCustomDelimiter() -> Bool {
@@ -70,11 +68,9 @@ class StringCalculator {
     
     
     func split(numbers: [String], WithDelimiters delimiters: [String], currentDelimiter: Int = 0) -> [String] {
-        print("Current delimiter value= \(currentDelimiter)")
         if currentDelimiter == delimiters.count {
             return numbers
         }
-        
         return split( numbers.flatMap{ $0.componentsSeparatedByString(delimiters[currentDelimiter]) }, WithDelimiters: delimiters, currentDelimiter: currentDelimiter + 1)
     }
     
