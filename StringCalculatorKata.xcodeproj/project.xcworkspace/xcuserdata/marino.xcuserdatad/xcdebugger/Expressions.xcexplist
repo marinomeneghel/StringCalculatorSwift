@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "StringCalculator.add(String) -&gt; Int:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "num.containsString(&quot;\n&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

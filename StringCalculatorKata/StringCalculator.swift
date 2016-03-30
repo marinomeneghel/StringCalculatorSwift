@@ -10,20 +10,29 @@ import Foundation
 class StringCalculator {
     
     func add(numberString: String) -> Int {
-        if (numberString.characters.count == 1) {
-            return Int(numberString)!
-        
-        } else if (numberString.characters.count > 1) {
-            
-            let numbers = numberString.componentsSeparatedByString(",")
-            var counter: Int = 0
-            for num in numbers {
-                counter += Int(num)!
-            }
-            return counter
+        if (numberString.characters.count == 0) {
+            return 0
         }
         
+        let numbers = numberString.componentsSeparatedByString(",")
+        print(String(numbers))
+        return sumNumbers(numbers)
+    }
+    
+    var counter: Int = 0
+    
+    func sumNumbers(var numbers: [String]) -> Int {
+        for num in numbers {
+            if(num.containsString("\n")) {
+                numbers.removeAtIndex(numbers.indexOf(num)!)
+                numbers.appendContentsOf(num.componentsSeparatedByString("\n"))
+                return sumNumbers(numbers)
+            }
+            numbers.removeAtIndex(numbers.indexOf(num)!)
+            return Int(num)! + sumNumbers(numbers)
+        }
         return 0
     }
+    
     
 }

@@ -38,5 +38,11 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(6, stringCalculator.add("1,2,3"))
     }
     
+    
+    func testNewLineIsValidAsSeparator() {
+        XCTAssertEqual(6, stringCalculator.add("1\n2,3"))
+        XCTAssertEqual(10, stringCalculator.add("1\n2\n3\n4"))
+    }
+    
 }
 
