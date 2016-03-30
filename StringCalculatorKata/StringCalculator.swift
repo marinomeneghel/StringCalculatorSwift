@@ -25,7 +25,22 @@ class StringCalculator {
 
         let delimiters = getDelimiters()
         let splittedNumbers = split([self.numberString], WithDelimiters: delimiters)
+        let negativeNumbers = extractNegativeNumbers(splittedNumbers)
+        if negativeNumbers.count > 0 {
+            
+        }
+        
         return sumNumbers(splittedNumbers)
+    }
+    
+    func extractNegativeNumbers(numbers: [String]) -> [Int] {
+        var negativeNumbers: [Int] = Array<Int>()
+        for num in numbers {
+            if let convertedNum = Int(num) {
+                negativeNumbers.append(convertedNum)
+            }
+        }
+        return negativeNumbers
     }
     
     func getDelimiters() -> [String] {
@@ -38,6 +53,7 @@ class StringCalculator {
     func getCustomDelimiter() -> String {
         let range: Range = indexAfterInitialDelimiter..<indexBeforeFinalDelimiter
         let customDelimiter: String = numberString[range]
+        // I don't like this
         numberString = numberString.substringFromIndex(indexBeforeFinalDelimiter.advancedBy(1))
         return customDelimiter
     }

@@ -61,6 +61,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "StringCalculator.extractNegativeNumbers([String]) -&gt; [Int]:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Int(num)">
+            </PersistentString>
+            <PersistentString
+               value = "Int(num) &lt; 0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "StringCalculator.(split([String], WithDelimiters : [String], currentDelimiter : Int) -&gt; [String]).(closure #1):StringCalculator.swift">
          <PersistentStrings>
             <PersistentString

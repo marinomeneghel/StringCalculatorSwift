@@ -52,6 +52,9 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(12, stringCalculator.add("//$\n1$2,3\n6"))
     }
     
+    func testPassNegativeNumberLaunchException() {
+        XCTAssertEqual(-1, stringCalculator.add("-1,2,3"))
+    }
     
 }
 
