@@ -3,10 +3,35 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "StringCalculator.sumNumbers([String]) -&gt; Int:StringCalculator.swift">
+      </ContextState>
+      <ContextState
          contextName = "StringCalculator.add(String) -&gt; Int:StringCalculator.swift">
          <PersistentStrings>
             <PersistentString
                value = "num.containsString(&quot;\n&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.(split([String], WithDelimiters : [String], currentDelimiter : Int) -&gt; [String]).(closure #1):StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numbers">
+            </PersistentString>
+            <PersistentString
+               value = "numbers.flatMap { $0.componentsSeparatedByString(delimiters[currentDelimiter]) }">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.split([String], WithDelimiters : [String], currentDelimiter : Int) -&gt; [String]:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numbers.flatMap { $0.componentsSeparatedByString(delimiters[currentDelimiter]) }">
+            </PersistentString>
+            <PersistentString
+               value = "$0">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

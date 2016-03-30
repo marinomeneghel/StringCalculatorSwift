@@ -9,30 +9,45 @@
 import Foundation
 class StringCalculator {
     
+    private let commaDelimiter: String = ","
+    private let newLineDelimiter: String = "\n"
+    private let defaultDelimiters: [String]
+    
+    init() {
+        defaultDelimiters = [commaDelimiter, newLineDelimiter]
+    }
+    
     func add(numberString: String) -> Int {
         if (numberString.characters.count == 0) {
             return 0
         }
         
-        let numbers = numberString.componentsSeparatedByString(",")
-        print(String(numbers))
-        return sumNumbers(numbers)
+        let splittedNumbers = split([numberString], WithDelimiters: defaultDelimiters)
+        return sumNumbers(splittedNumbers)
     }
     
-    var counter: Int = 0
     
-    func sumNumbers(var numbers: [String]) -> Int {
+    func sumNumbers(numbers: [String]) -> Int {
+        var counter: Int = 0
         for num in numbers {
-            if(num.containsString("\n")) {
-                numbers.removeAtIndex(numbers.indexOf(num)!)
-                numbers.appendContentsOf(num.componentsSeparatedByString("\n"))
-                return sumNumbers(numbers)
-            }
-            numbers.removeAtIndex(numbers.indexOf(num)!)
-            return Int(num)! + sumNumbers(numbers)
+            counter += Int(num)!
         }
-        return 0
+        return counter
     }
     
+    
+    func split(numbers: [String], WithDelimiters delimiters: [String], currentDelimiter: Int = 0) -> [String] {
+        print("Current delimiter value= \(currentDelimiter)")
+        if currentDelimiter == delimiters.count {
+            print("This never happens right? \(numbers)")
+            return numbers
+        }
+        
+        return split( numbers.flatMap{ $0.componentsSeparatedByString(delimiters[currentDelimiter]) }, WithDelimiters: delimiters, currentDelimiter: currentDelimiter + 1)
+    }
     
 }
+
+
+
+
