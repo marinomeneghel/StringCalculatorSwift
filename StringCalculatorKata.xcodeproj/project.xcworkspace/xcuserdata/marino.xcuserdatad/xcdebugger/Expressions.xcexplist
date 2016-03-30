@@ -3,7 +3,54 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "StringCalculator.getCustomDelimiterRangeInString() -&gt; Range&lt;String.CharacterView.Index&gt;:StringCalculator.swift">
+      </ContextState>
+      <ContextState
          contextName = "StringCalculator.sumNumbers([String]) -&gt; Int:StringCalculator.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.split([String], WithDelimiters : [String], currentDelimiter : Int) -&gt; [String]:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numbers.flatMap { $0.componentsSeparatedByString(delimiters[currentDelimiter]) }">
+            </PersistentString>
+            <PersistentString
+               value = "$0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.hasCustomDelimiter() -&gt; Bool:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numberString.hasPrefix(prefix)">
+            </PersistentString>
+            <PersistentString
+               value = "numberString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.getDelimiters() -&gt; [String]:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "defaultDelimiters">
+            </PersistentString>
+            <PersistentString
+               value = "getCustomDelimiter()">
+            </PersistentString>
+            <PersistentString
+               value = "numberString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StringCalculator.getCustomDelimiter() -&gt; String:StringCalculator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numberString">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "StringCalculator.add(String) -&gt; Int:StringCalculator.swift">
@@ -21,17 +68,6 @@
             </PersistentString>
             <PersistentString
                value = "numbers.flatMap { $0.componentsSeparatedByString(delimiters[currentDelimiter]) }">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "StringCalculator.split([String], WithDelimiters : [String], currentDelimiter : Int) -&gt; [String]:StringCalculator.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "numbers.flatMap { $0.componentsSeparatedByString(delimiters[currentDelimiter]) }">
-            </PersistentString>
-            <PersistentString
-               value = "$0">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

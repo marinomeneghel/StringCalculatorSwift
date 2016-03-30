@@ -44,5 +44,9 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(10, stringCalculator.add("1\n2\n3\n4"))
     }
     
+    func testCustomDelimitersAreSupported() {
+        XCTAssertEqual(12, stringCalculator.add("//;\n1;2;3;6"))
+    }
+    
 }
 

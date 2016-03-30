@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StringCalculatorKata/StringCalculator.swift"
-            timestampString = "481028320.806751"
+            timestampString = "481042762.394635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "sumNumbers(_:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "add(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
