@@ -22,39 +22,61 @@ class StringCalculatorTests: XCTestCase {
     }
     
     func testEmptyStringReturnsZero() {
-        XCTAssertEqual(0, stringCalculator.add(""))
+        assertCalculation(0, input: "")
     }
-    
+
     func testPassOneNumberReturnsItsValue() {
-        XCTAssertEqual(1, stringCalculator.add("1"))
+        assertCalculation(1, input: "1")
     }
-    
+
     func testTwoNumbersArgumentReturnsSum() {
-        XCTAssertEqual(3, stringCalculator.add("1,2"))
+        assertCalculation(3, input: "1,2")
     }
 
     
     func testArbitraryNumberOfArgumentsReturnsSum() {
-        XCTAssertEqual(6, stringCalculator.add("1,2,3"))
+        assertCalculation(6, input: "1,2,3")
     }
-    
+
     
     func testNewLineIsValidAsSeparator() {
-        XCTAssertEqual(6, stringCalculator.add("1\n2,3"))
-        XCTAssertEqual(10, stringCalculator.add("1\n2\n3\n4"))
+        assertCalculation(6, input: "1\n2,3")
+        assertCalculation(10, input: "1\n2\n3\n4")
     }
-    
+
     func testCustomDelimitersAreSupported() {
-        XCTAssertEqual(12, stringCalculator.add("//;\n1;2;3;6"))
+        assertCalculation(12, input: "//;\n1;2;3;6")
     }
     
     func testMixedDelimiters() {
-        XCTAssertEqual(12, stringCalculator.add("//$\n1$2,3\n6"))
+        assertCalculation(12, input: "//$\n1$2,3\n6")
     }
     
     func testPassNegativeNumberLaunchException() {
-        XCTAssertEqual(-1, stringCalculator.add("-1,2,3"))
+        XCTAssertEqual(assertCalculation(-2, input: "1,-2,3"), [-2])
     }
     
+    func assertCalculation(expected: Int, input: String) -> [Int] {
+        do {
+            let result = try stringCalculator.add(input)
+            XCTAssertEqual(expected, result)
+            
+        } catch StringCalculatorError.NegativeNumberNotAllowedError(let negativeNumbers) {
+            print(negativeNumbers)
+            return negativeNumbers
+        
+        } catch {
+            
+        }
+        return [Int]()
+    }
+    
+    
+    
 }
+
+
+
+
+
 

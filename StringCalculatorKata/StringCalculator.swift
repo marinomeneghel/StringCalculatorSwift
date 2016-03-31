@@ -20,14 +20,14 @@ class StringCalculator {
         defaultDelimiters = [commaDelimiter, newLineDelimiter]
     }
     
-    func add(numberString: String) -> Int {
+    func add(numberString: String) throws -> Int {
         self.numberString = numberString
 
         let delimiters = getDelimiters()
         let splittedNumbers = split([self.numberString], WithDelimiters: delimiters)
         let negativeNumbers = extractNegativeNumbers(splittedNumbers)
         if negativeNumbers.count > 0 {
-            
+            throw StringCalculatorError.NegativeNumberNotAllowedError(negativeNumbers: negativeNumbers)
         }
         
         return sumNumbers(splittedNumbers)
@@ -37,7 +37,9 @@ class StringCalculator {
         var negativeNumbers: [Int] = Array<Int>()
         for num in numbers {
             if let convertedNum = Int(num) {
-                negativeNumbers.append(convertedNum)
+                if convertedNum < 0 {
+                    negativeNumbers.append(convertedNum)
+                }
             }
         }
         return negativeNumbers

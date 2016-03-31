@@ -10,6 +10,7 @@
 		802DC1841CAACC0700C54D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1831CAACC0700C54D33 /* AppDelegate.swift */; };
 		802DC1A61CAAD06100C54D33 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1A51CAAD06100C54D33 /* StringCalculator.swift */; };
 		802DC1A91CAAD17700C54D33 /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DC1981CAACC0700C54D33 /* StringCalculatorTests.swift */; };
+		806394B71CAD0DE400B4BE65 /* StringCalculatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806394B61CAD0DE400B4BE65 /* StringCalculatorError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		802DC1981CAACC0700C54D33 /* StringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
 		802DC19A1CAACC0700C54D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802DC1A51CAAD06100C54D33 /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
+		806394B61CAD0DE400B4BE65 /* StringCalculatorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculatorError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				802DC1AB1CAAD20F00C54D33 /* StringCalculator */,
+				806394B61CAD0DE400B4BE65 /* StringCalculatorError.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				802DC1A61CAAD06100C54D33 /* StringCalculator.swift in Sources */,
+				806394B71CAD0DE400B4BE65 /* StringCalculatorError.swift in Sources */,
 				802DC1841CAACC0700C54D33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +379,7 @@
 				802DC19F1CAACC0700C54D33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		802DC1A01CAACC0700C54D33 /* Build configuration list for PBXNativeTarget "StringCalculatorKataTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +388,7 @@
 				802DC1A21CAACC0700C54D33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
