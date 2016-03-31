@@ -16,13 +16,12 @@ class StringCalculator {
     private var defaultDelimiters: [String]
     private var numberString: String = ""
     
-    init() {
-        defaultDelimiters = [commaDelimiter, newLineDelimiter]
+    init(numbers: String) {
+        self.numberString = numbers
+        self.defaultDelimiters = [commaDelimiter, newLineDelimiter]
     }
     
-    func add(numberString: String) throws -> Int {
-        self.numberString = numberString
-
+    func add() throws -> Int {
         let delimiters = getDelimiters()
         let splittedNumbers = split([self.numberString], WithDelimiters: delimiters)
         let negativeNumbers = extractNegativeNumbers(splittedNumbers)

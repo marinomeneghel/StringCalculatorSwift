@@ -11,8 +11,6 @@ import XCTest
 
 class StringCalculatorTests: XCTestCase {
     
-    let stringCalculator: StringCalculator = StringCalculator()
-    
     override func setUp() {
         super.setUp()
     }
@@ -58,7 +56,8 @@ class StringCalculatorTests: XCTestCase {
     
     func assertCalculation(expected: Int, input: String) -> [Int] {
         do {
-            let result = try stringCalculator.add(input)
+            let stringCalculator = StringCalculator(numbers: input)
+            let result = try stringCalculator.add()
             XCTAssertEqual(expected, result)
             
         } catch StringCalculatorError.NegativeNumberNotAllowedError(let negativeNumbers) {
